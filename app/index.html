@@ -9,16 +9,22 @@
 
 	<h1>Vue Navigation Menu</h1>
 
-	<div id="menu">
+	<div v-cloak id="menu">
 		<nav>
-			<a class="active" id="homeMenu" href="#">Home</a>
+			<a id="homeMenu" href="#">Home</a>
 			<a id="projectsMenu" href="#">Projects</a>
 			<a id="servicesMenu" href="#">Services</a>
 			<a id="contactMenu" href="#">Contact</a>
 		</nav>
+
+		<div>
+			<!-- Binding paragraph text (kind of... one way binding) to a variable in main.js > data -->
+			<p class="messagePara">{{ message }}</p>
+		</div>
+
 	</div>
 
-	<!-- Scripts to link main.js and Vue -->
+	<!-- Scripts (CDN) to link main.js and Vue (Vue has to be loaded first) -->
 	<script src="https://unpkg.com/vue"></script>
 	<script src="main.js"></script>
 

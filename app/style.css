@@ -11,6 +11,10 @@ h1 {
 	padding: 24px;
 }
 
+[v-cloak] {
+	display: none;
+}
+
 nav {
 	background-color: #5597b4;
 	margin: 60px auto 45px;
@@ -30,4 +34,10 @@ nav a {
 
 .active {
 	background-color: #e35885;
+}
+
+.messagePara {
+	font-size: 16px;
+	padding: 24px;
+	text-align: center;
 }

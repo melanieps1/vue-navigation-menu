@@ -3,15 +3,31 @@
 	padding: 0;
 }
 
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	padding: 24px;
+}
+
 nav {
 	background-color: #5597b4;
-	padding: 18px 30px;
+	margin: 60px auto 45px;
+	text-align: center;
 }
 
 nav a {
 	color: #fff;
+	display: inline-block;
 	font-size: 16px;
-	font-weight: bold;
-	text-decoration: none !important;
+	/*font-weight: bold;*/
+	letter-spacing: 1px;
+	padding: 18px 30px !important;
+	text-decoration: none;
 	text-transform: uppercase;
+}
+
+.active {
+	background-color: #e35885;
 }

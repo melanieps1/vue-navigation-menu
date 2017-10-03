@@ -25,19 +25,27 @@ nav a {
 	color: #fff;
 	display: inline-block;
 	font-size: 16px;
-	/*font-weight: bold;*/
 	letter-spacing: 1px;
 	padding: 18px 30px !important;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
-.active {
-	background-color: #e35885;
+p {
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-align: center;
 }
 
-.messagePara {
-	font-size: 16px;
-	padding: 24px;
-	text-align: center;
+p b {
+	text-transform: uppercase;
+}
+
+/* Ex: This targets `.home` when `.home` is active in the nav */
+nav.home .home,
+nav.projects .projects,
+nav.services .services,
+nav.contact .contact,
+nav.blog .blog {
+	background-color: #e35885;
 }

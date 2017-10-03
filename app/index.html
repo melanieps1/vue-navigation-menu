@@ -10,17 +10,19 @@
 	<h1>Vue Navigation Menu</h1>
 
 	<div v-cloak id="menu">
-		<nav>
+		<nav v-bind:class="active" v-on:click.prevent>
 			<!-- v-bind explanation - if homeActive is true, it applies the class -->
-			<a v-on:click="makeActive('homeMenu', 'HOME')" v-bind:class="{ 'active': homeActive }" id="homeMenu" href="#">Home</a>
-			<a v-on:click="makeActive('projectsMenu', 'PROJECTS')" v-bind:class="{ 'active': projectsActive }" id="projectsMenu" href="#">Projects</a>
-			<a v-on:click="makeActive('servicesMenu', 'SERVICES')" v-bind:class="{ 'active': servicesActive }" id="servicesMenu" href="#">Services</a>
-			<a v-on:click="makeActive('contactMenu', 'CONTACT')" v-bind:class="{ 'active': contactActive }" id="contactMenu" href="#">Contact</a>
+			<a v-on:click="makeActive('home')" class="home" href="#">Home</a>
+			<a v-on:click="makeActive('projects')" class="projects" href="#">Projects</a>
+			<a v-on:click="makeActive('services')" class="services" href="#">Services</a>
+			<a v-on:click="makeActive('contact')" class="contact" href="#">Contact</a>
+			<a v-on:click="makeActive('blog')" class="blog" href="#">Blog</a>
 		</nav>
 
 		<div>
-			<!-- Binding paragraph text (kind of... one way binding) to a variable in main.js > data -->
-			<p class="messagePara">{{ message }}</p>
+			<!-- Binding paragraph text (kind of) to a variable in main.js > data -->
+			<p v-if="active">Now displaying <b>{{ active }}</b> </p>
+			<p v-else>Please click a menu item</p>
 		</div>
 
 	</div>

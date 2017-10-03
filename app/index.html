@@ -11,10 +11,11 @@
 
 	<div v-cloak id="menu">
 		<nav>
-			<a id="homeMenu" href="#">Home</a>
-			<a id="projectsMenu" href="#">Projects</a>
-			<a id="servicesMenu" href="#">Services</a>
-			<a id="contactMenu" href="#">Contact</a>
+			<!-- v-bind explanation - if homeActive is true, it applies the class -->
+			<a v-on:click="makeActive('homeMenu', 'HOME')" v-bind:class="{ 'active': homeActive }" id="homeMenu" href="#">Home</a>
+			<a v-on:click="makeActive('projectsMenu', 'PROJECTS')" v-bind:class="{ 'active': projectsActive }" id="projectsMenu" href="#">Projects</a>
+			<a v-on:click="makeActive('servicesMenu', 'SERVICES')" v-bind:class="{ 'active': servicesActive }" id="servicesMenu" href="#">Services</a>
+			<a v-on:click="makeActive('contactMenu', 'CONTACT')" v-bind:class="{ 'active': contactActive }" id="contactMenu" href="#">Contact</a>
 		</nav>
 
 		<div>
